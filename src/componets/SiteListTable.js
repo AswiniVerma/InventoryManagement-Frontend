@@ -2,7 +2,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import { FaBeer, FaEye, FaInfo, FaMinus, FaPlus, FaTools } from "react-icons/fa"
+import { FaInfo, FaMinus, FaPlus, FaTools } from "react-icons/fa"
 import {MdDelete} from "react-icons/md"
 import { api_endpoints } from './api';
 const SiteListTable = ({ sites }) => {
@@ -10,7 +10,7 @@ const SiteListTable = ({ sites }) => {
     const addToCart = async id =>{
      
         
-        let newSite = sites.filter(x=>x.id==id);
+        let newSite = sites.filter(x=>x.id===id);
         let newSite2 = newSite[0];
         console.log(id);
       

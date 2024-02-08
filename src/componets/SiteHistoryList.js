@@ -1,6 +1,5 @@
 // YourComponent.js
 import React, { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
 import SiteHistoryListTable from './SiteHistoryListTable'; // Adjust the path based on your project structure
 import axios from 'axios';
 import Navbar from './Navbar';
