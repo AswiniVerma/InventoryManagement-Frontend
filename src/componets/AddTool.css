@@ -1,0 +1,43 @@
+AddTool.css
+
+/* div {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #596FB7;
+   
+}
+
+button {
+    margin-right: 500px;
+    margin-left: 500px;
+    background-color: #596FB7;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+button:hover {
+    background-color: green;
+}

@@ -1,0 +1,37 @@
+/* Add any general styles for your Home component */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Styles for the Home heading */
+.home-heading {
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Styles for the Home buttons */
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover styles for the Home buttons */
+.home-button:hover {
+    background-color: #2980b9;
+}
+
+/* Additional styling for better spacing */
+br {
+    margin: 10px 0;
+}
