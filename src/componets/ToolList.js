@@ -7,17 +7,21 @@ import { FaToolbox } from 'react-icons/fa';
 import AddTool from './AddTool';
 import Navbar from './Navbar';
 import { api_endpoints } from './api';
+import Loading from './Loading';
 const ToolList = () =>{
   const [tools, setTools] = useState([]);
+  const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         // Fetch data from the REST API
         axios.get(api_endpoints.allTools)
             .then(response => {
                 setTools(response.data);
+                 setLoading(false);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
+                 setLoading(false);
             });
     }, []);
    const deleteCart = async id =>{
@@ -30,6 +34,10 @@ const ToolList = () =>{
   return (
         <div className='overflow-x-auto'>
              <Navbar/>
+             {loading ? (
+             <Loading/>
+             ):(
+                <>
           <h1 className='text-4xl flex justify-center font-bold'>Tool List  <FaToolbox/></h1>
             <table className='min-w-full bg-white border border-gray-300'>
                 <thead>
@@ -61,6 +69,9 @@ const ToolList = () =>{
                 </tbody>
             </table>
             <AddTool/>
+            </>
+             )
+            }
         </div>
     );
 }
