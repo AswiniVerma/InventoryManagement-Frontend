@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
        
          
-        <Link to="/" className="text-white font-bold text-xl flex items-center">
+        <Link to="/Home" className="text-white font-bold text-xl flex items-center">
           <span className='flex-grow'> RIGHTS</span>
           </Link>
         

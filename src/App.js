@@ -15,10 +15,12 @@ import DecreaseNoOfTools from './componets/DecreaseNoOfTools';
 import SiteDetails from './componets/SiteDetails';
 import UpdateSite from './componets/UpdateSite';
 import UpdateToolList from './componets/UpdateToolList';
+import Login from './componets/Login';
 
 const router = createBrowserRouter(
-  [
-    {path:'/', element:<Home/>},
+  [ 
+    {path:'/' , element:<Login/>},
+    {path:'/Home', element:<Home/>},
      {path:'/allTools', element:<ToolList/>},
      {path:'/allSite', element:<SiteList/>},
      {path:'/addSite', element:<AddSite/>},
@@ -33,7 +35,8 @@ const router = createBrowserRouter(
      {path:'/siteDetails/:id', element:<SiteDetails/>},
      {path:'/updateSite/:id/:siteName/:address/:supervisor', element:<UpdateSite/>},
      {path:'/receiveTools/:id', element:<ReceiveTools/>},
-     {path:'/updateToolList/:id/:name/:originalquantity/:curquantity', element:<UpdateToolList/>}
+     {path:'/updateToolList/:id/:name/:originalquantity/:curquantity', element:<UpdateToolList/>},
+     
 
   ]
 )
