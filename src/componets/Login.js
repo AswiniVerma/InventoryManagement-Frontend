@@ -3,8 +3,10 @@ import Axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import './AddTool.css'
 import { api_endpoints } from './api'
+import Loading from './Loading';
 
 function Login() {
+    const [loading, setLoading] = useState(false);
   const url = api_endpoints.Login
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -20,18 +22,23 @@ function Login() {
   }
 
   function submit(e){
+    setLoading(true)
     e.preventDefault();
     Axios.post(url,{
       username:data.username,
       password:data.password
     })
     .then(res=>{
+        
       console.log(res.data);
+      setLoading(false);
       if(res.data === "Success"){
          navigate('/Home')
       }
       else{
+        setLoading(false);
         alert("Invalid username password");
+        
         window.location.reload();
       }
     
@@ -42,6 +49,12 @@ function Login() {
   }
 
   return (
+   <div className='overflow-x-auto'>
+             
+             {loading ? (
+             <Loading/>
+             ):(
+                <>
     <div className='text-center'>
         <h1 className='text-4xl flex justify-center font-bold'>Rights Power </h1>
         <p>Please login!</p>
@@ -51,6 +64,10 @@ function Login() {
           <button>Login</button>
         </form>
     </div>
+     </>
+             )
+            }
+        </div>
   )
 }
 
