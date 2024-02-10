@@ -26,8 +26,11 @@ const ToolList = () =>{
     }, []);
    const deleteCart = async id =>{
     
-      await axios.delete(`${api_endpoints.deleteTool}/${id}`);
-      alert("tool deletd");
+      await axios.delete(`${api_endpoints.deleteTool}/${id}`)
+      .then(res=>{
+        alert(res.data);
+      });
+      
       window.location.reload();
     }
 
