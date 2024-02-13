@@ -3,6 +3,7 @@ import Axios from 'axios'
 import { useParams } from 'react-router-dom';
 import './AddTool.css'
 import { api_endpoints } from './api'
+import Navbar from './Navbar';
 
 function AddPermanentDamagedTool() {
     
@@ -42,12 +43,13 @@ function AddPermanentDamagedTool() {
 
   return (
     <div >
+        <Navbar/>
         <form onSubmit={(e)=>submit(e)}>
           <input onChange={(e)=>handle(e)} id="name" value={data.name} placeholder="name" type="text" required />
           <input onChange={(e)=>handle(e)} id="quantity" value={data.quantity} placeholder="Quantity" type="text" required/>
           <input onChange={(e)=>handle(e)} id="siteName" value={data.siteName} placeholder="Site Name" type="text" required/>
           <input onChange={(e)=>handle(e)} id="reason" value={data.reason} placeholder="Reason" type="text" required/>
-          <button>Add Lost Tool</button>
+          <button>Add Unrepair Tool</button>
         </form>
     </div>
   )

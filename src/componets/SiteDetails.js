@@ -45,26 +45,41 @@ const SiteDetails = () => {
   }
 
   return (
-    <div className="text-center ">
+    <div className="">
       <Navbar/>
-    <div className="text-center text-3xl" id="site-details-content" ref={pdfRef}>
-      <h1 className="text-4xl flex justify-center font bold"> Rights Power</h1>
-      <h2 className="text-3xl  flex justify-center font-bold ">Site Details</h2>
-      <p><strong>Name:</strong> {product.name}</p>
-      <p><strong>Address:</strong> {product.address}</p>
-      <p><strong>Supervisor:</strong> {product.supervisor}</p>
-    <br />
-    <br />
-      <h3 className="font-bold">Tool Details:</h3>
-      <ul>
-        {product.toolDetails.map((tool, index) => (
-          <li key={index}>
-            <p><strong>Tool Name:</strong> {tool.toolName}</p>
-            <p><strong>Tool Quantity:</strong> {tool.toolQuantity}</p>
-          </li>
+    <div className=" text-xl" id="site-details-content" ref={pdfRef}>
+      <h1 className="text-4xl px-6 flex font bold"> Rights Power</h1>
+      <h2 className="text-2xl px-6 font-bold ">Site Details</h2>
+      <p className="px-6"><strong>Name:</strong> {product.name}</p>
+      <p className="px-6"><strong>Address:</strong> {product.address}</p>
+      <p className="px-6"><strong>Supervisor:</strong> {product.supervisor}</p>
+    
+      <h3 className="font-bold px-6">Tool Details:</h3>
+      
+        <table className="mx-6">
+          <thead>
+            <tr>
+              <th>SNo:</th>
+              <th>Name</th>
+              <th>Quantity</th>
+            </tr>
+           
+          </thead>
+          <tbody>
+            {product.toolDetails.map((tool, index) => (
+          
+          <tr key={index}>
+            
+            <td>{index}</td>
+            <td>{tool.toolName} </td> 
+            <td> {tool.toolQuantity}</td>
+         
+        </tr>  
         ))}
-      </ul>
-          <h1 className="text-center">Thankyou!</h1>
+          </tbody>
+        </table>
+       
+          <h1 className="justify-center">-----x-----</h1>
     </div>
     <button className="button" onClick={downloadPDF}> Download PDF</button>
     </div>

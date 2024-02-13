@@ -3,6 +3,7 @@ import Axios from 'axios'
 import { useParams } from 'react-router-dom';
 import './AddTool.css'
 import { api_endpoints } from './api'
+import Navbar from './Navbar';
 
 function AddLostTool() {
     
@@ -42,6 +43,7 @@ function AddLostTool() {
 
   return (
     <div >
+        <Navbar/>
         <form onSubmit={(e)=>submit(e)}>
           <input onChange={(e)=>handle(e)} id="name" value={data.name} placeholder="name" type="text" required />
           <input onChange={(e)=>handle(e)} id="quantity" value={data.quantity} placeholder="Quantity" type="text" required/>
