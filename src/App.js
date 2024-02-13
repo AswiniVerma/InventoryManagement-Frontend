@@ -16,6 +16,12 @@ import SiteDetails from './componets/SiteDetails';
 import UpdateSite from './componets/UpdateSite';
 import UpdateToolList from './componets/UpdateToolList';
 import Login from './componets/Login';
+import AddLostTool from './componets/AddLostTool';
+import LostToolList from './componets/LostToolList';
+import AddDamagedTool from './componets/AddDamagedTool';
+import AddPermanentDamagedTool from './componets/AddPermanentDamagedTool';
+import DamagedToolList from './componets/DamagedToolList';
+import PermanentDamagedToolList from './componets/PermanentDamageToolList';
 
 const router = createBrowserRouter(
   [ 
@@ -36,7 +42,12 @@ const router = createBrowserRouter(
      {path:'/updateSite/:id/:siteName/:address/:supervisor', element:<UpdateSite/>},
      {path:'/receiveTools/:id', element:<ReceiveTools/>},
      {path:'/updateToolList/:id/:name/:originalquantity/:curquantity', element:<UpdateToolList/>},
-     
+     {path:'/lostTool/:name/:quantity/:siteName', element:<AddLostTool/>},
+     {path: '/getAllLostTool', element:<LostToolList/>},
+      {path:'/damagedTool/:name/:quantity/:siteName', element:<AddDamagedTool/>},
+     {path: '/getAllDamagedTool', element:<DamagedToolList/>},
+       {path:'/permanentDamagedTool/:name/:quantity/:siteName', element:<AddPermanentDamagedTool/>},
+      {path: '/getAllPermanentDamagedTool', element:<PermanentDamagedToolList/>},
 
   ]
 )

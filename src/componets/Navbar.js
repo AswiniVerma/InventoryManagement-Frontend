@@ -22,6 +22,10 @@ const Navbar = () => {
           <Link to="/allTools" className="text-white hover:text-gray-300">Tool List</Link>
           <Link to="/allSite" className="text-white hover:text-gray-300">Site List</Link>
           <Link to="/siteHistory" className="text-white hover:text-gray-300">Site History</Link>
+           <Link to="/getAllLostTool" className="text-white hover:text-gray-300">Lost Tools</Link>
+            <Link to="/getAllDamagedTool" className="text-white hover:text-gray-300">Damaged Tools</Link>
+             <Link to="/getAllPermanentDamagedTool" className="text-white hover:text-gray-300">Permanent Damaged Tools</Link>
+          
         </div>
       </div>
     </nav>
