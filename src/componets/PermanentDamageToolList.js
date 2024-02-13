@@ -4,7 +4,6 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './ToolList.css'
 import { FaToolbox } from 'react-icons/fa';
-import AddTool from './AddTool';
 import Navbar from './Navbar';
 import { api_endpoints } from './api';
 import Loading from './Loading';
@@ -24,15 +23,7 @@ const PermanentDamagedToolList = () =>{
                  setLoading(false);
             });
     }, []);
-   const deleteCart = async id =>{
-    
-      await axios.delete(`${api_endpoints.deleteTool}/${id}`)
-      .then(res=>{
-        alert(res.data);
-      });
-      
-      window.location.reload();
-    }
+  
 
   return (
         <div className='overflow-x-auto'>
