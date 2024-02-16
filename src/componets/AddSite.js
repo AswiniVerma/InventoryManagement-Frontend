@@ -61,7 +61,7 @@ console.log( {
       .then((response) => {
         console.log('Data posted successfully:', response.data);
         alert(response.data);
-        if(response.data!=="not a valid req")
+        if(response.data!=="not a valid req" && response.data!=="Please enter numeric values for tool quantity")
         window.location.reload();
         // Optionally, you can redirect or perform other actions after successful post
       })

@@ -34,8 +34,14 @@ function UpdateToolList() {
     })
     .then(res=>{
       console.log(res.data);
-      alert(res.data)
-      navigate('/allTools')
+      if(res.data==="Please enter numeric values in quantity"){
+        alert (res.data);
+      }
+      else{
+        alert(res.data)
+        navigate('/allTools')
+      }
+      
     
     })
 

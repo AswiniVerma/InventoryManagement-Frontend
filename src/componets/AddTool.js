@@ -25,7 +25,14 @@ function AddTool() {
     })
     .then(res=>{
       console.log(res.data);
+      if(res.data === "Please enter the numeric value of tool"){
+        alert(res.data);
+      }
+      else{
+        alert(res.data);
       window.location.reload();
+      }
+      
     
     })
 

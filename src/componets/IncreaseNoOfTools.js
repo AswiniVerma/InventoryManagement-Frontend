@@ -31,7 +31,7 @@ function IncreaseNoOfTools() {
     })
     .then(res=>{
       console.log(res.data);
-      alert("tool added");
+      alert(res.data);
     
     })
 
