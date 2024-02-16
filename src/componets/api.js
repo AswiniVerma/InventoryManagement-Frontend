@@ -12,6 +12,10 @@ export const api_endpoints = {
     getAllDamagedTool :`${api_base_url}/getAllDamagedTool`,
     permanentDamagedTool : `${api_base_url}/permanentDamagedTool`,
     getAllPermanentDamagedTool :`${api_base_url}/getAllPermanentDamagedTool`,
+    toolDetails : `${api_base_url}/toolDetails`,
+    deletePermanentDamagedTools :`${api_base_url}/deletePermanentDamagedTool`,
+    toolRepaired : `${api_base_url}/toolRepaired`,
+    toolFound : `${api_base_url}/toolFound`,
 
     //site
     addSite : `${api_base_url}/addSite`,

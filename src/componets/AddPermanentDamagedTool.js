@@ -33,6 +33,7 @@ function AddPermanentDamagedTool() {
     })
     .then(res=>{
       console.log(res.data);
+      alert(res.data);
       window.location.reload();
     
     })

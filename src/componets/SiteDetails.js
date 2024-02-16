@@ -81,7 +81,7 @@ const SiteDetails = () => {
        
           <h1 className="justify-center">-----x-----</h1>
     </div>
-    <button className="button" onClick={downloadPDF}> Download PDF</button>
+    <button className="button justify-center" onClick={downloadPDF}> Download PDF</button>
     </div>
   );
 }

@@ -22,6 +22,9 @@ import AddDamagedTool from './componets/AddDamagedTool';
 import AddPermanentDamagedTool from './componets/AddPermanentDamagedTool';
 import DamagedToolList from './componets/DamagedToolList';
 import PermanentDamagedToolList from './componets/PermanentDamageToolList';
+import ToolDetails from './componets/ToolDetails';
+import ToolFound from './componets/ToolFound';
+import ToolRepaired from './componets/ToolRepaired';
 
 const router = createBrowserRouter(
   [ 
@@ -48,6 +51,9 @@ const router = createBrowserRouter(
      {path: '/getAllDamagedTool', element:<DamagedToolList/>},
        {path:'/permanentDamagedTool/:name/:quantity/:siteName', element:<AddPermanentDamagedTool/>},
       {path: '/getAllPermanentDamagedTool', element:<PermanentDamagedToolList/>},
+      {path:'/toolDetails/:toolName', element:<ToolDetails/>},
+      {path:'/toolFound/:id/:name/:quantity', element:<ToolFound/>},
+      {path:'/toolRepaired/:id/:name/:quantity', element:<ToolRepaired/>}
 
   ]
 )

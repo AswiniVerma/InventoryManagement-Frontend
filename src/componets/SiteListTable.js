@@ -23,7 +23,7 @@ const SiteListTable = ({ sites }) => {
      const deleteCart = async id =>{
     
       await axios.delete(`${api_endpoints.deleteSite}/${id}`);
-      alert("tool deletd");
+      alert("site deletd");
       window.location.reload();
     }
   return (

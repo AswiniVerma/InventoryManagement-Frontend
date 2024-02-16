@@ -55,8 +55,8 @@ const DamagedToolList = () =>{
                             <td className='py-2 px-4 border-b'>{tool.siteName}</td>
                             <td className='py-2 px-4 border-b'>{tool.reason}</td>
                             <td className='py-2 px-4 border-b'>    
-                            <Link className="m-2 button" onClick={()=>{}}>Tool Reoaired</Link>
-                            {/* <Link className=" m-2 button" to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>  */}
+                           
+                            <Link className=" m-2 button" to={`/toolRepaired/${tool.id}/${tool.name}/${tool.quantity}`} >Update Damaged Tool Details</Link> 
                             </td>
 
 

@@ -23,6 +23,7 @@ const LostToolList = () =>{
                  setLoading(false);
             });
     }, []);
+    
 
   return (
         <div className='overflow-x-auto'>
@@ -53,8 +54,8 @@ const LostToolList = () =>{
                             <td className='py-2 px-4 border-b'>{tool.siteName}</td>
                             <td className='py-2 px-4 border-b'>{tool.reason}</td>
                             <td className='py-2 px-4 border-b'>    
-                            <Link className="m-2 button" onClick={()=>{}}>Tool Found</Link>
-                            {/* <Link className=" m-2 button" to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>  */}
+                           
+                            <Link className=" m-2 button" to={`/toolFound/${tool.id}/${tool.name}/${tool.quantity}`} >Update Lost Tool Details</Link> 
                             </td>
 
 

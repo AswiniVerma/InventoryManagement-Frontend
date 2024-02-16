@@ -23,6 +23,13 @@ const PermanentDamagedToolList = () =>{
                  setLoading(false);
             });
     }, []);
+     const deleteCart = async id =>{
+    
+     await axios.delete(`${api_endpoints.deletePermanentDamagedTools}/${id}`);
+    // await axios.delete(`http://localhost:8080/deletePermanentDamagedTool/${id}`)
+      alert("Tool deletd");
+      window.location.reload();
+    }
   
 
   return (
@@ -32,7 +39,7 @@ const PermanentDamagedToolList = () =>{
              <Loading/>
              ):(
                 <>
-          <h1 className='text-4xl flex justify-center font-bold'>Lost Tool List  <FaToolbox/></h1>
+          <h1 className='text-4xl flex justify-center font-bold'>Permanent Damaged Tools  <FaToolbox/></h1>
             <table className='min-w-full bg-white border border-gray-300'>
                 <thead>
                     <tr>
@@ -54,7 +61,7 @@ const PermanentDamagedToolList = () =>{
                             <td className='py-2 px-4 border-b'>{tool.siteName}</td>
                             <td className='py-2 px-4 border-b'>{tool.reason}</td>
                             <td className='py-2 px-4 border-b'>    
-                            <Link className="m-2 button" onClick={()=>{}}>Tool Found</Link>
+                            <Link className="button" onClick={()=>{deleteCart(tool.id)}}>Delete</Link>
                             {/* <Link className=" m-2 button" to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>  */}
                             </td>
 
