@@ -60,10 +60,10 @@ const ToolDetails = () => {
                 <td className="font-bold bg-customBlue text-white">Name</td>
                 <td className="font-bold bg-customBlue text-white">Original Quantity</td>
                 <td className="font-bold bg-customBlue text-white">Current Quantity</td>
-                <td className="font-bold bg-customBlue text-white">Tools in Site</td>
+                <td className="font-bold bg-customBlue text-white">Tools at Site</td>
                 <td className="font-bold bg-customBlue text-white">Lost</td>
                 <td className="font-bold bg-customBlue text-white">Damaged</td>
-                <td className="font-bold bg-customBlue text-white">Unrepair</td>
+                <td className="font-bold bg-customBlue text-white">Unrepairable</td>
             </tr>
         </thead>
         <tbody>

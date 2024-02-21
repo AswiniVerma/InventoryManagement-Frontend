@@ -58,7 +58,7 @@ const SiteListTable = ({ sites }) => {
                     <Link className="" to={`/decreaseToolNumber/${site.name}/${tool.toolName}`} > <FaMinus className='w-4 h-4 transition-transform transform hover:scale-110' /> </Link>
                     <Link className="button" to={`/lostTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Lost </Link> 
                     <Link className="button" to={`/damagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Damaged </Link> 
-                    <Link className="button" to={`/permanentDamagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Unrepair</Link> 
+                    <Link className="button" to={`/permanentDamagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Unrepairable</Link> 
                    </div>
                       
                   </li>
