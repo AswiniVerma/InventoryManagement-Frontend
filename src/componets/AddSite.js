@@ -1,5 +1,5 @@
 // AddSite.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddTool.css'
 import Navbar from './Navbar';
@@ -15,6 +15,22 @@ const AddSite = () => {
     supervisor: '',
     toolDetails: [{ toolName: '', toolQuantity: '' }],
   });
+
+  //new mod
+  const [toolNames, setToolNames] = useState([]);
+
+  useEffect(() => {
+    // Fetch tool names from the API
+    axios.get(api_endpoints.allTools)
+      .then(response => {
+        setToolNames(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching tool names:', error);
+      });
+  }, []); // Empty dependency array to fetch data only once on component mount
+
+  //new mod
 
 const handleInputChange = (e, index) => {
   let { id, value } = e.target;
@@ -107,9 +123,9 @@ console.log( {
         />
 
         {/* <label>Tool Details:</label> */}
-        {data.toolDetails.map((tool, index) => (
+        {/* {data.toolDetails.map((tool, index) => (
           <div key={index}>
-            {/* <label htmlFor={`toolName${index}`}>Tool Name:</label> */}
+           
             <input
               type="text"
               id={`toolName${index}`}
@@ -117,7 +133,25 @@ console.log( {
               value={tool.toolName}
               onChange={(e) => handleInputChange(e, index)}
               required
-            />
+            /> */}
+
+{data.toolDetails.map((tool, index) => (
+          <div key={index}  className="mb-4 ">
+            <label htmlFor={`toolName${index}`} className="block text-sm font-medium text-gray-700 mb-1">Tool Name:</label>
+            <select
+              id={`toolName${index}`}
+              value={tool.toolName.name}
+              onChange={(e) => handleInputChange(e, index)}
+              required
+              className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            >
+              <option className='border m-2' value="">Select Tool Name</option>
+              {toolNames.map((toolName, i) => (
+                <option key={i} value={toolName.name}>
+                  {toolName.name}
+                </option>
+              ))}
+            </select>
 
             {/* <label htmlFor={`toolQuantity${index}`}>Tool Quantity:</label> */}
             <input

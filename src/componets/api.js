@@ -1,5 +1,5 @@
-//const api_base_url = 'http://localhost:8080'
-const api_base_url = 'https://inventorymanagement-render.onrender.com'
+const api_base_url = 'http://localhost:8080'
+//const api_base_url = 'https://inventorymanagement-render.onrender.com'
 export const api_endpoints = {
     //tool
     allTools : `${api_base_url}/allTools`,
@@ -16,6 +16,7 @@ export const api_endpoints = {
     deletePermanentDamagedTools :`${api_base_url}/deletePermanentDamagedTool`,
     toolRepaired : `${api_base_url}/toolRepaired`,
     toolFound : `${api_base_url}/toolFound`,
+    searchTool :`${api_base_url}/searchTool`,
 
     //site
     addSite : `${api_base_url}/addSite`,

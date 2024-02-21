@@ -9,6 +9,7 @@ module.exports = {
         customBg: '#474F7A',
         customBlue: '#596FB7',
         customButton:'#40A2E3',
+        customCard :'#B4D4FF',
       },
     },
   },

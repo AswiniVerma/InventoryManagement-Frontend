@@ -8,6 +8,7 @@ import AddTool from './AddTool';
 import Navbar from './Navbar';
 import { api_endpoints } from './api';
 import Loading from './Loading';
+import SearchTool from './SearchTool';
 const ToolList = () =>{
   const [tools, setTools] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,14 +36,16 @@ const ToolList = () =>{
     }
 
   return (
-        <div className='overflow-x-auto'>
+        <div className='max-w-screen-xl mx-auto overflow-x-auto'>
              <Navbar/>
+             <AddTool/>
+            <SearchTool/>
              {loading ? (
              <Loading/>
              ):(
                 <>
-          <h1 className='text-4xl flex justify-center font-bold'>Tool List  <FaToolbox/></h1>
-            <table className='min-w-full bg-white border border-gray-300'>
+          <h1 className='text-4xl sm:text-2xl flex justify-center font-bold'>Tool List  <FaToolbox/></h1>
+            <table className='min-w-full bg-white border border-gray-300 overflow-x-auto'>
                 <thead>
                     <tr>
                         <th className='py-2 px-4 border-b bg-customBlue text-white'>Tool ID</th>
@@ -56,14 +59,14 @@ const ToolList = () =>{
                 <tbody>
                     {tools.map(tool => (
                         <tr key={tool._id}>
-                            <td className='py-2 px-4 border-b'>{tool.id}</td>
-                            <td  className='py-2 px-4 border-b'>{tool.name}</td>
-                            <td className='py-2 px-4 border-b'>{tool.originalquantity}</td>
-                            <td className='py-2 px-4 border-b'>{tool.curquantity}</td>
-                            <td className='py-2 px-4 border-b'> 
-                            <Link className="m-2 button" to={`/toolDetails/${tool.name}`} >Tool Details</Link>  
+                            <td className='py-2 px-4 border-b '>{tool.id}</td>
+                            <td  className='py-2 px-4 border-b '>{tool.name}</td>
+                            <td className='py-2 px-4 border-b '>{tool.originalquantity}</td>
+                            <td className='py-2 px-4 border-b '>{tool.curquantity}</td>
+                            <td className='py-2 px-4 border-b '> 
+                            <Link className="m-2 button " to={`/toolDetails/${tool.name}`} >Tool Details</Link>  
                             <Link className="m-2 button" onClick={()=>{deleteCart(tool.id)}}>Remove Tool</Link>
-                            <Link className=" m-2 button" to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>
+                            <Link className=" m-2 button " to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>
                             </td>
 
 
@@ -72,7 +75,8 @@ const ToolList = () =>{
                     ))}
                 </tbody>
             </table>
-            <AddTool/>
+            {/* <AddTool/>
+            <SearchTool/> */}
             </>
              )
             }
