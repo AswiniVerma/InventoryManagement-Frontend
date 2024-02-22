@@ -42,11 +42,11 @@ const SiteListTable = ({ sites }) => {
       <tbody>
         {sites.map((site) => (
           <tr key={site.id}>
-            <td className='py-2 px-4 border-b'>{site.id}</td>
-            <td className='py-2 px-4 border-b'>{site.name}</td>
-            <td className='py-2 px-4 border-b'>{site.address}</td>
-            <td className='py-2 px-4 border-b'>{site.supervisor || 'N/A'}</td>
-            <td className='py-2 px-4 border-b'>
+            <td className='py-1 px-2 border-b'>{site.id}</td>
+            <td className='py-1 px-2 border-b'>{site.name}</td>
+            <td className='py-1 px-2 border-b'>{site.address}</td>
+            <td className='py-1 px-2 border-b'>{site.supervisor || 'N/A'}</td>
+            <td className='py-1 px-2 border-b'>
               <ul>
                 {site.toolDetails.map((tool, index) => (
                   <li key={index}>
@@ -54,11 +54,11 @@ const SiteListTable = ({ sites }) => {
                    {tool.toolName}: {tool.toolQuantity}
                    
 
-                    <Link className="" to={`/addExtraTool/${site.name}/${tool.toolName}`} > <FaPlus className='w-4 h-4 transition-transform transform hover:scale-110' /> </Link> 
-                    <Link className="" to={`/decreaseToolNumber/${site.name}/${tool.toolName}`} > <FaMinus className='w-4 h-4 transition-transform transform hover:scale-110' /> </Link>
-                    <Link className="button" to={`/lostTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Lost </Link> 
-                    <Link className="button" to={`/damagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Damaged </Link> 
-                    <Link className="button" to={`/permanentDamagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Unrepairable</Link> 
+                    <Link className="" to={`/addExtraTool/${site.name}/${tool.toolName}`} > <FaPlus className='w-4 h-4 text-green-500 transition-transform transform hover:scale-110' /> </Link> 
+                    <Link className="" to={`/decreaseToolNumber/${site.name}/${tool.toolName}`} > <FaMinus className='w-4 h-4 text-red-500 transition-transform transform hover:scale-110' /> </Link>
+                    <Link className="small-button" to={`/lostTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Lost </Link> 
+                    <Link className="small-button" to={`/damagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Damaged </Link> 
+                    <Link className="small-button" to={`/permanentDamagedTool/${tool.toolName}/${tool.toolQuantity}/${site.name}`} > Unrepairable</Link> 
                    </div>
                       
                   </li>

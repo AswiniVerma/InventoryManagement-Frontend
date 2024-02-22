@@ -56,9 +56,10 @@ function SearchTool() {
           value={data.name}
           placeholder="Name"
           type="text"
+          
           required
         />
-        <button className='button' type="submit" disabled={loading}>
+        <button className=' bg-customBlue m-4' type="submit" disabled={loading}>
           {loading ? 'Searching...' : 'Search Tool'}
         </button>
       </form>

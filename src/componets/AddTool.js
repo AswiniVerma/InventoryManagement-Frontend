@@ -44,7 +44,7 @@ function AddTool() {
     <div >
         <form onSubmit={(e)=>submit(e)}>
           <input onChange={(e)=>handle(e)} id="name" value={data.name} placeholder="name" type="text" required />
-          <input onChange={(e)=>handle(e)} id="originalquantity" value={data.originalquantity} placeholder="Original Quantity" type="text" required/>
+          <input className='m-4' onChange={(e)=>handle(e)} id="originalquantity" value={data.originalquantity} placeholder="Original Quantity" type="text" required/>
           <button>Add Tool</button>
         </form>
     </div>

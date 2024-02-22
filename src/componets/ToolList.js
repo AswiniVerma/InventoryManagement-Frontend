@@ -59,14 +59,14 @@ const ToolList = () =>{
                 <tbody>
                     {tools.map(tool => (
                         <tr key={tool._id}>
-                            <td className='py-2 px-4 border-b '>{tool.id}</td>
-                            <td  className='py-2 px-4 border-b '>{tool.name}</td>
-                            <td className='py-2 px-4 border-b '>{tool.originalquantity}</td>
-                            <td className='py-2 px-4 border-b '>{tool.curquantity}</td>
-                            <td className='py-2 px-4 border-b '> 
-                            <Link className="m-2 button " to={`/toolDetails/${tool.name}`} >Tool Details</Link>  
-                            <Link className="m-2 button" onClick={()=>{deleteCart(tool.id)}}>Remove Tool</Link>
-                            <Link className=" m-2 button " to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>
+                            <td className='py-1 px-2 border-b '>{tool.id}</td>
+                            <td  className='py-1 px-2 border-b '>{tool.name}</td>
+                            <td className='py-1 px-2 border-b '>{tool.originalquantity}</td>
+                            <td className='py-1 px-2 border-b '>{tool.curquantity}</td>
+                            <td className='py-1 px-2 border-b '> 
+                            <Link className="m-2 small-button " to={`/toolDetails/${tool.name}`} >Tool Details</Link>  
+                            <Link className="m-2 small-button" onClick={()=>{deleteCart(tool.id)}}>Remove Tool</Link>
+                            <Link className=" m-2 small-button " to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>
                             </td>
 
 

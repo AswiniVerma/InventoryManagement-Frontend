@@ -55,13 +55,13 @@ const PermanentDamagedToolList = () =>{
                 <tbody>
                     {tools.map(tool => (
                         <tr key={tool._id}>
-                            <td className='py-2 px-4 border-b'>{tool.id}</td>
-                            <td  className='py-2 px-4 border-b'>{tool.name}</td>
-                            <td className='py-2 px-4 border-b'>{tool.quantity}</td>
-                            <td className='py-2 px-4 border-b'>{tool.siteName}</td>
-                            <td className='py-2 px-4 border-b'>{tool.reason}</td>
-                            <td className='py-2 px-4 border-b'>    
-                            <Link className="button" onClick={()=>{deleteCart(tool.id)}}>Delete</Link>
+                            <td className='py-1 px-2 border-b'>{tool.id}</td>
+                            <td  className='py-1 px-2 border-b'>{tool.name}</td>
+                            <td className='py-1 px-2 border-b'>{tool.quantity}</td>
+                            <td className='py-1 px-2 border-b'>{tool.siteName}</td>
+                            <td className='py-1 px-2 border-b'>{tool.reason}</td>
+                            <td className='py-1 px-2 border-b'>    
+                            <Link className="small-button" onClick={()=>{deleteCart(tool.id)}}>Delete</Link>
                             {/* <Link className=" m-2 button" to={`/updateToolList/${tool.id}/${tool.name}/${tool.originalquantity}/${tool.curquantity}`} >Update Tool</Link>  */}
                             </td>
 
